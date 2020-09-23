@@ -1,6 +1,6 @@
 class ServerController {
   index(_, response) {
-    return response.json({ message: "API ONLINE" });
+    return response.json({ message: 'API ONLINE' });
   }
 }
 
