@@ -1,15 +1,16 @@
 export default (request, response, next) => {
   const { authorization } = request.headers;
 
-  console.log(authorization);
+  const [_, basic] = authorization.split('Basic ');
 
-  const bufferObj = Buffer.from(authorization, "base64");
+  const bufferObj = Buffer.from(basic, 'base64');
 
-  bufferObj.toString("utf8");
+  const userData = bufferObj.toString('utf8');
 
-  console.log(bufferObj.toString('utf8'));
+  const [user, password] = userData.split(':');
 
-  // const [user, password] =
+  if (user !== 'unisalnodereactjs' || password !== '123456')
+    return response.status(401).json({ message: 'No Authorization' });
 
   next();
 };
