@@ -27,7 +27,10 @@ Após o container estiver iniciado, basta dar o comando:
 
 Para realizar a instalação de todas as dependências do projeto.
 
-Após a finalização da instalação, rode o comando:
+Após a instalação dos pacotes, temos que rodar as migrations do projeto com o comando:
+> npx knex migrate:latest
+
+Após a finalização das migrations, rode o comando:
 > npm run dev
 
 E o servidor de desenvolvimento iniciará.
