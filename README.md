@@ -17,12 +17,12 @@ API foi desenvolvida com o intuito de criar um Mini-curso para os alunos da facu
 - [x] pg
 - [x] docker
 
-## Startar o Projeto
+## Iniciar o Projeto
 
 Vamos precisa baixar a imagem do PostgreSQL:
 > docker run --name postgres -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
 
-Após o container estiver estartado, basta dar o comando:
+Após o container estiver iniciado, basta dar o comando:
 > npm i
 
 Para realizar a instalação de todas as dependências do projeto.
@@ -30,7 +30,7 @@ Para realizar a instalação de todas as dependências do projeto.
 Após a finalização da instalação, rode o comando:
 > npm run dev
 
-E o servidor de desenvolvimento inciará.
+E o servidor de desenvolvimento iniciará.
 
 ## Debug do Projeto
 
