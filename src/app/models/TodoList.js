@@ -2,7 +2,7 @@ import db from '../../config/db';
 
 class TodoList {
   async findAll() {
-    const data = await db('todo_list');
+    const data = await db('todo_list').orderBy('date_limit', 'asc');
 
     return data;
   }

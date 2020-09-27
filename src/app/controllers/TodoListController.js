@@ -19,7 +19,9 @@ class TodoListController {
           .status(400)
           .json({ message: 'Nome da TodoList não foi informado.' });
 
-      const todoList = await TodoList.createTodoList({ name, date_limit });
+      const checkDateLimit = date_limit ? date_limit : null;
+
+      const todoList = await TodoList.createTodoList({ name, date_limit: checkDateLimit });
 
       return response.status(201).json(todoList);
     } catch (error) {

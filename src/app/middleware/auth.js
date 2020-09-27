@@ -1,6 +1,9 @@
 export default (request, response, next) => {
   const { authorization } = request.headers;
 
+  if (!authorization)
+    return response.status(401).json({ message: 'Request Unauthorized.' });
+
   const [_, basic] = authorization.split('Basic ');
 
   const bufferObj = Buffer.from(basic, 'base64');
