@@ -1,9 +1,13 @@
 import db from '../../config/db';
 
 class TodoList {
+
+  async findById({ id }) {
+    return await db('todo_list').where({ id }).first();
+  }
+
   async findAll() {
     const data = await db('todo_list').orderBy('date_limit', 'asc');
-
     return data;
   }
 

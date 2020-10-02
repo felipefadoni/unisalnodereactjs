@@ -14,15 +14,19 @@ class Tasks {
       .returning('*');
   }
 
-  async updateTask({ id }) {
+  async updateTask({ id, status }) {
     return await db('tasks')
-      .update({ status: true })
+      .update({ status })
       .where({ id })
       .returning('*');
   }
 
   async deleteTask({ id }) {
     await db('tasks').delete().where({ id });
+  }
+
+  async deleteTasksByIdTodoList({ todo_list_id }) {
+    await db('tasks').delete().where({ todo_list_id });
   }
 }
 

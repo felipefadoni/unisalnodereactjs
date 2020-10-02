@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import TodoList from '../models/TodoList';
+import Tasks from '../models/Tasks';
 
 class TodoListController {
   async index(request, response) {
@@ -54,6 +55,7 @@ class TodoListController {
   async delete(request, response) {
     try {
       const { id } = request.params;
+      await Tasks.deleteTasksByIdTodoList({ todo_list_id: id });
       await TodoList.deleteTodoList({ id });
       return response
         .status(204)
