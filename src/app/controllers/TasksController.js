@@ -52,7 +52,16 @@ class TasksController {
         status: false
       });
 
-      return response.status(201).json(taskCreated);
+      const dateFormat = taskCreated[0].date_limit
+        ? format(new Date(taskCreated[0].date_limit), 'dd/MM/yyyy')
+        : null;
+
+      const mapTaskCreated = {
+        ...taskCreated[0],
+        dateFormat
+      }
+
+      return response.status(201).json(mapTaskCreated);
     } catch (error) {
       return response.status(500).json({ message: error.message });
     }
