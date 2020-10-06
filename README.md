@@ -59,8 +59,8 @@ Foi muito legal, desenvolver essa API e realizar a apresentação para os alunos
 # Meus Contatos
 - [x] Celular: 12 9.9663-2821 (Whatsapp)
 - [x] Email: felipefadonimt@gmail.com
-- [x] [Facebook][https://www.facebook.com/felipefadoni]
-- [x] [Instagram][https://www.instagram.com/ffadoni]
-- [x] [Linkedin][https://www.linkedin.com/in/felipefadoni/]
+- [x] [Facebook](https://www.facebook.com/felipefadoni)
+- [x] [Instagram](https://www.instagram.com/ffadoni)
+- [x] [Linkedin](https://www.linkedin.com/in/felipefadoni/)
 
 Estou sempre a disposição para tirar dúvidas e trocar conhecimentos.
